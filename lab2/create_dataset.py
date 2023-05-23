@@ -1,8 +1,8 @@
 import pandas as pd
 
 # Загрузка данных
-train = pd.read_csv('/home/alexberkut98/ubuntu/project/train.csv')
-test = pd.read_csv('/home/alexberkut98/ubuntu/project/test.csv')
+train = pd.read_csv('/train.csv')
+test = pd.read_csv('/test.csv')
 
 # обработка данных
 # заполним данные о поле пассажира числовыми данными (0 или 1) вместо текстовых ('male' или 'female')
@@ -13,5 +13,5 @@ train['Age'] = train['Age'].fillna(train.Age.mean())
 test['Age'] = test['Age'].fillna(train.Age.mean())
 
 # запишем созданные датасеты во внешние csv файлы
-train[['Pclass', 'Sex', 'Age', 'SibSp', 'Parch', 'Survived']].to_csv('/home/alexberkut98/ubuntu/project/data_train.csv', index=False)
-test[['Pclass', 'Sex', 'Age', 'SibSp', 'Parch']].to_csv('/home/alexberkut98/ubuntu/project/data_test.csv', index=False)
+train[['Pclass', 'Sex', 'Age', 'SibSp', 'Parch', 'Survived']].to_csv('/data_train.csv', index=False)
+test[['Pclass', 'Sex', 'Age', 'SibSp', 'Parch']].to_csv('/data_test.csv', index=False)
