@@ -11,4 +11,4 @@ model = LogisticRegression(max_iter=100_000).fit(X_train, y_train)
 
 # сохраним обученную модель
 import pickle
-pickle.dump(model, open('/home/alexberkut98/ubuntu/project/model.pkl', 'wb'))
+pickle.dump(model, open('/model.pkl', 'wb'))
